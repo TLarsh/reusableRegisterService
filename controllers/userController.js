@@ -1,0 +1,11 @@
+const {mapFunction} = require('../utils/marper');
+const {registerUser} = require('../services/registrationServices');
+
+const registerController = async(req, res) => {
+    const response = await mapFunction(
+        registerUser,
+        req.body,
+        // req.query.referral
+    );
+    return res.status
+};
